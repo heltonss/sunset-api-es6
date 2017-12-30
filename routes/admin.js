@@ -8,5 +8,7 @@ const adminController = new AdminController(adminModel);
 
 const router = express.Router();
 
-router.get('/', adminController.getAllAdmin(adminController));
+router.get('/', adminController.getAllAdmin.bind(adminController));
+
+module.exports = router;
 

@@ -4,7 +4,7 @@ import Debug from 'debug';
 
 const debug = Debug('sunsetapi:db');
 
-function connection() {
+const connection = () => {
   const username = config.get('mongodb.username');
   const password = config.get('mongodb.password');
   const server = config.get('mongodb.server');

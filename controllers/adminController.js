@@ -3,11 +3,12 @@ import Promise from 'bluebird';
 // const debug = Debug('sunsetapi:db');
 
 export default class AdminController {
+  model;
   // adminController = (adminModel) => {
   //   this.model = Promise.promisifyAll(adminModel);
   // }
-  constructor(model) {
-    this.model = Promise.promisifyAll(model);
+  constructor(userModel) {
+    this.model = Promise.promisifyAll(userModel);
   }
 
   createAdmin(req, res, next) {
